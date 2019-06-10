@@ -17,6 +17,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.png$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 200 * 1024
+          }
+        }
+
+      },
+      {
         test: /\.js$/,
         use: {
           loader: 'babel-loader',
